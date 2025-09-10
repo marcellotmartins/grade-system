@@ -305,8 +305,8 @@ docker run -p 3000:3000 school-grades
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/school-grades-premium?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/school-grades-premium?style=social)
+![GitHub stars](https://img.shields.io/github/stars/marcellotmartins/grade-system?style=social)
+![GitHub forks](https://img.shields.io/github/forks/marcellotmartins/grade-system?style=social)
 
 </div>
 
