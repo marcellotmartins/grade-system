@@ -322,7 +322,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 **Built with 💙 to revolutionize educational management**
 
-[🌐 Website](#) • [💼 LinkedIn](#) • [🐦 Twitter](#) • [📧 Email](#)
+[💼 LinkedIn](https://www.linkedin.com/in/marcellotmartins/) • [🐙 GitHub](https://github.com/marcellotmartins)
 
 </div>
 
