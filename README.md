@@ -40,7 +40,7 @@ Um sistema web completo para gerenciamento de notas escolares, desenvolvido com 
 1. **Clone o repositório**
 \`\`\`bash
 git clone https://github.com/marcellotmartins/grade-system.git
-cd sistema-notas-escolares
+cd grade-system
 \`\`\`
 
 2. **Instale as dependências**
