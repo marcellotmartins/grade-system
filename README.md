@@ -307,14 +307,8 @@ docker run -p 3000:3000 school-grades
 
 ![GitHub stars](https://img.shields.io/github/stars/your-username/school-grades-premium?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/your-username/school-grades-premium?style=social)
-![GitHub issues](https://img.shields.io/github/issues/your-username/school-grades-premium)
-![GitHub license](https://img.shields.io/github/license/your-username/school-grades-premium)
 
 </div>
-
-## 📄 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
