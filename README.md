@@ -1,170 +1,170 @@
-# 📚 Sistema de Notas Escolares
+# 📚 School Grades System
 
-Um sistema web completo para gerenciamento de notas escolares, desenvolvido com Next.js 15, que permite o lançamento de notas, cálculo automático de médias e acompanhamento do desempenho dos alunos.
+A complete web system for managing school grades, developed with Next.js 15. It allows grade entry, automatic average calculation, and monitoring of student performance.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-### 🎯 Principais Recursos
-- **Gerenciamento de Alunos**: Cadastro, listagem e edição de informações dos estudantes
-- **Lançamento de Notas**: Interface intuitiva para registro de notas por disciplina
-- **Cálculo Automático**: Médias calculadas automaticamente por disciplina e geral
-- **Status de Aprovação**: Determinação automática de aprovação/reprovação (média ≥ 7.0)
-- **Dashboard Interativo**: Estatísticas da turma com gráficos e métricas em tempo real
-- **Relatórios Detalhados**: Visualização completa do desempenho individual e da turma
+### 🎯 Main Features
+- **Student Management**: Register, list, and edit student information
+- **Grade Entry**: Intuitive interface to record grades by subject
+- **Automatic Calculation**: Averages calculated automatically by subject and overall
+- **Approval Status**: Automatic determination of pass/fail (average ≥ 7.0)
+- **Interactive Dashboard**: Class statistics with real-time charts and metrics
+- **Detailed Reports**: Full visualization of individual and class performance
 
-### 📊 Tipos de Avaliação Suportados
-- Prova
-- Trabalho
-- Seminário
-- Atividade
-- Projeto
+### 📊 Supported Evaluation Types
+- Exam
+- Assignment
+- Seminar
+- Activity
+- Project
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
 - **Frontend**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui
-- **Linguagem**: TypeScript
-- **Banco de Dados**: SQL (compatível com PostgreSQL, MySQL)
+- **Language**: TypeScript
+- **Database**: SQL (compatible with PostgreSQL, MySQL)
 - **Icons**: Lucide React
 
-## 📦 Instalação
+## 📦 Installation
 
-### Pré-requisitos
+### Prerequisites
 - Node.js 18+ 
-- npm ou yarn
-- Banco de dados SQL (PostgreSQL recomendado)
+- npm or yarn
+- SQL Database (PostgreSQL recommended)
 
-### Passo a Passo
+### Step by Step
 
-1. **Clone o repositório**
-\`\`\`bash
+1. **Clone the repository**
+```bash
 git clone https://github.com/marcellotmartins/grade-system.git
 cd grade-system
-\`\`\`
+```
 
-2. **Instale as dependências**
-\`\`\`bash
+2. **Install dependencies**
+```bash
 npm install
-# ou
+# or
 yarn install
-\`\`\`
+```
 
-3. **Configure o banco de dados**
-\`\`\`bash
-# Execute os scripts SQL na ordem:
+3. **Configure the database**
+```bash
+# Run the SQL scripts in order:
 # 1. scripts/01-create-tables.sql
 # 2. scripts/02-seed-data.sql
-\`\`\`
+```
 
-4. **Configure as variáveis de ambiente**
-\`\`\`bash
-# Crie um arquivo .env.local
-DATABASE_URL="sua_string_de_conexao_aqui"
-\`\`\`
+4. **Configure environment variables**
+```bash
+# Create a .env.local file
+DATABASE_URL="your_connection_string_here"
+```
 
-5. **Execute o projeto**
-\`\`\`bash
+5. **Run the project**
+```bash
 npm run dev
-# ou
+# or
 yarn dev
-\`\`\`
+```
 
-6. **Acesse o sistema**
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+6. **Access the system**
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🎯 Como Usar
+## 🎯 How to Use
 
-### 1. Cadastro de Alunos
-- Acesse "Gerenciar Alunos" na página inicial
-- Clique em "Novo Aluno" para cadastrar
-- Preencha: nome, matrícula, turma e série
+### 1. Student Registration
+- Go to "Manage Students" on the home page
+- Click "New Student" to register
+- Fill in: name, enrollment, class, and grade
 
-### 2. Lançamento de Notas
-- Acesse "Lançar Nota" na página inicial
-- Selecione o aluno e a disciplina
-- Escolha o tipo de avaliação
-- Insira a nota (0-10) e observações opcionais
-- O sistema mostra automaticamente se a nota é aprovação/reprovação
+### 2. Grade Entry
+- Go to "Enter Grade" on the home page
+- Select the student and subject
+- Choose the evaluation type
+- Enter the grade (0-10) and optional notes
+- The system automatically shows pass/fail status
 
-### 3. Visualização de Resultados
-- Acesse "Ver Médias" para relatório completo
-- Visualize médias por disciplina e geral
-- Acompanhe o status de cada aluno
-- Filtre por turma ou série
+### 3. Results Visualization
+- Go to "View Averages" for a complete report
+- View averages by subject and overall
+- Track each student’s status
+- Filter by class or grade
 
 ### 4. Dashboard
-- Visão geral das estatísticas da turma
-- Gráficos de desempenho
-- Métricas de aprovação/reprovação
-- Distribuição de notas
+- Overview of class statistics
+- Performance charts
+- Pass/fail metrics
+- Grade distribution
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
-\`\`\`
-sistema-notas-escolares/
-├── app/                    # App Router do Next.js
+```
+school-grades-system/
+├── app/                    # Next.js App Router
 │   ├── api/               # API Routes
-│   │   ├── students/      # Endpoints de alunos
-│   │   ├── grades/        # Endpoints de notas
-│   │   └── averages/      # Endpoints de médias
-│   ├── students/          # Páginas de gerenciamento de alunos
-│   ├── grades/            # Páginas de lançamento de notas
-│   ├── results/           # Páginas de resultados
-│   ├── dashboard/         # Dashboard principal
-│   └── globals.css        # Estilos globais
-├── components/            # Componentes React
-│   ├── ui/               # Componentes shadcn/ui
-│   └── navigation.tsx    # Navegação principal
-├── lib/                  # Utilitários e configurações
-│   └── grade-calculations.ts # Lógica de cálculo de médias
-├── scripts/              # Scripts SQL
+│   │   ├── students/      # Student endpoints
+│   │   ├── grades/        # Grade endpoints
+│   │   └── averages/      # Average endpoints
+│   ├── students/          # Student management pages
+│   ├── grades/            # Grade entry pages
+│   ├── results/           # Results pages
+│   ├── dashboard/         # Main dashboard
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── ui/               # shadcn/ui components
+│   └── navigation.tsx    # Main navigation
+├── lib/                  # Utilities and configs
+│   └── grade-calculations.ts # Grade calculation logic
+├── scripts/              # SQL scripts
 │   ├── 01-create-tables.sql
 │   └── 02-seed-data.sql
 └── README.md
-\`\`\`
+```
 
 ## 🎨 Design System
 
-O sistema utiliza uma paleta de cores educacional profissional:
+The system uses a professional educational color palette:
 
-- **Verde Principal**: `#22c55e` - Transmite crescimento e sucesso
-- **Verde Escuro**: `#16a34a` - Para elementos de destaque
-- **Cinzas**: Tons neutros para texto e backgrounds
-- **Vermelho**: `#ef4444` - Para reprovações e alertas
-- **Azul**: `#3b82f6` - Para informações e links
+- **Main Green**: `#22c55e` - Represents growth and success
+- **Dark Green**: `#16a34a` - For highlights
+- **Grays**: Neutral tones for text and backgrounds
+- **Red**: `#ef4444` - For failures and alerts
+- **Blue**: `#3b82f6` - For info and links
 
-## 📊 Regras de Negócio
+## 📊 Business Rules
 
-### Cálculo de Médias
-- **Média por Disciplina**: Soma das notas ÷ quantidade de avaliações
-- **Média Geral**: Soma de todas as médias por disciplina ÷ quantidade de disciplinas
-- **Critério de Aprovação**: Média ≥ 7.0
+### Average Calculation
+- **Subject Average**: Sum of grades ÷ number of evaluations
+- **Overall Average**: Sum of all subject averages ÷ number of subjects
+- **Approval Criteria**: Average ≥ 7.0
 
-### Tipos de Status
-- ✅ **Aprovado**: Média ≥ 7.0
-- ❌ **Reprovado**: Média < 7.0
-- ⏳ **Em Andamento**: Sem notas suficientes
+### Status Types
+- ✅ **Approved**: Average ≥ 7.0
+- ❌ **Failed**: Average < 7.0
+- ⏳ **In Progress**: Not enough grades
 
-## 🤝 Contribuição
+## 🤝 Contribution
 
-Contribuições são bem-vindas! Para contribuir:
+Contributions are welcome! To contribute:
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📝 Roadmap
 
-- [ ] Autenticação de usuários (professores/coordenadores)
-- [ ] Exportação de relatórios em PDF
-- [ ] Notificações por email
-- [ ] Integração com sistemas acadêmicos
-- [ ] App mobile
-- [ ] Backup automático de dados
-      
+- [ ] User authentication (teachers/coordinators)
+- [ ] Export reports to PDF
+- [ ] Email notifications
+- [ ] Integration with academic systems
+- [ ] Mobile app
+- [ ] Automatic data backup
+
 ---
 
-⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
+⭐ If this project was useful to you, consider giving it a star on the repository!
